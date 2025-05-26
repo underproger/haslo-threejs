@@ -89,7 +89,10 @@ directionalLight.position.set(0.5, 0, 0.866); // приблизительно 60
 scene.add(directionalLight);
 
 const rgbeLoader = new RGBELoader();
-rgbeLoader.load('assets/hdri.hdr', function (texture) {
+
+import hdri from './assets/hdri.hdr';
+
+rgbeLoader.load(hdri, function (texture) {
     const pmremGenerator = new THREE.PMREMGenerator(renderer);
     const envMap = pmremGenerator.fromEquirectangular(texture).texture;
     scene.environment = envMap;
@@ -371,22 +374,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-
-    const totalFrames = 321;
-
-    let frame = 1;
-
-    gsap.to({ frame: 1 }, {
-        frame: totalFrames,
-        duration: 2,
-        ease: 'linear',
-        repeat: -1, // бесконечный цикл
-        onUpdate: function () {
-            const currentFrame = Math.floor(this.targets()[0].frame) % totalFrames || 1;
-            const filename = `assets/bottle-figma-2/${String(currentFrame).padStart(3, '0')}.png`;
-            bottle.src = filename;
-        }
-    });
 
 
     // TYPES

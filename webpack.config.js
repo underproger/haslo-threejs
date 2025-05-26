@@ -23,6 +23,14 @@ module.exports = {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset/resource',
       },
+      {
+        test: /\.hdr$/i,
+        type: 'asset/resource', 
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
     ],
   },
   plugins: [
