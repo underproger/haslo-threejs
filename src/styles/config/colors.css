@@ -1,0 +1,18 @@
+:root {
+  --color-black--rgb: 0, 0, 0;
+  --color-black: #000;
+  --color-white--rgb: 255, 255, 255;
+  --color-white: #fff;
+  --color-green--rgb: 166, 248, 5;
+  --color-green: #A6F805;
+  --color-blue--rgb: 4, 207, 251;
+  --color-blue: #04CFFB;
+  --color-yellow--rgb: 255, 214, 0;
+  --color-yellow: #FFD600;
+  --color-red--rgb: 255, 9, 0;
+  --color-red: #FF0900;
+  --color-grey-100--rgb: 191, 191, 191;
+  --color-grey-100: #BFBFBF;
+  --color-grey-200--rgb: 16, 16, 16;
+  --color-grey-200: #101010;
+}
